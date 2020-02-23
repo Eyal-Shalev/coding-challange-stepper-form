@@ -1,0 +1,30 @@
+
+.step {
+    display: none;
+}
+
+[name=state]:checked ~[name=state] {pointer-events: none}
+
+[name=state][value="1"]:checked ~ #step-1 {
+    display: block;
+}
+
+[name=state][value="2"]:checked ~ #step-2 {
+    display: block;
+}
+
+[name=state][value="3"]:checked ~ #step-3 {
+    display: block;
+}
+
+body > main {
+    width: max-content;
+    margin: 20px auto 0;
+}
+
+body > footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

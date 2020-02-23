@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stepper Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<main>
+    <input type="radio" name="state" value="1" checked>
+    <input type="radio" name="state" value="2">
+    <input type="radio" name="state" value="3">
+    <form id="step-1" class="step">
+        <main>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required/>
+        </main>
+        <footer class="btn-group">
+            <button type="button" class="nav-btn" disabled>Back</button>
+            <button data-nav="2" type="submit" class="nav-btn next-btn">Next</button>
+        </footer>
+    </form>
+
+    <form id="step-2" class="step">
+        <main>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+        </main>
+        <footer class="btn-group">
+            <button data-nav="1" type="button" class="nav-btn prev-btn">Back</button>
+            <button data-nav="3" type="submit" class="nav-btn next-btn">Next</button>
+        </footer>
+    </form>
+
+    <form id="step-3" class="step">
+        <input type="hidden" name="email" id="hidden-email">
+        <input type="hidden" name="pass" id="hidden-pass">
+        <footer class="btn-group">
+            <button data-nav="2" type="button" class="nav-btn prev-btn">Back</button>
+            <button type="submit" class="nav-btn submit-btn">Submit</button>
+        </footer>
+    </form>
+</main>
+
+<footer>
+    <hr />
+    <h4>Query Params:</h4>
+    <pre id="query-args"></pre>
+</footer>
+<script src="/script.js"></script>
+</body>
+</html>
